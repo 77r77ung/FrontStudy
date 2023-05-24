@@ -1,0 +1,44 @@
+/* container(=wrap) 박스에 width를 지정하는 이유
+    -> 브라우저 화면이 축소되었을 때 내부 div 박스들이 찌그러지는 것을 방지하기 위해서 */
+.container {
+    width: 1000px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.post {
+    width: 80%;
+    height: 300px;
+    /* 방법 1) float: left; 사용 시 float를 사용한 다음 div 속성에 clear: both;를 추가해야 함. */
+    float: left;
+    /* 방법 2) 단, inline-block;을 사용할 시 div 사이의 공백을 모두 제거해주어야 함.
+    display: inline-block; */
+}
+
+.photo {
+    width: 20%;
+    height: 300px;
+    /* 방법 1) float: left; 사용 시 float를 사용한 다음 div 속성에 clear: both;를 추가해야 함. */
+    float: left;
+    /* 방법 2) 단, inline-block;을 사용할 시 div 사이의 공백을 모두 제거해주어야 함.
+    display: inline-block; */
+}
+
+.profile_photo {
+    width:50px;
+    /* display: block;을 넣어주면 좋은 이유? */
+    display: block;
+    float:left;
+    margin:20px;
+}
+
+.profile_info {
+    float:left;
+    margin-top: 15px;
+}
+
+.blog {
+    width: 100%;
+    height: 200px;
+    clear: both;
+}

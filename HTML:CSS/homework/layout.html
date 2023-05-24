@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meat charset = "UTF-8">
+        <title> Document </title>
+        <link href="css/layout.css" rel="stylesheet">
+    </head>
+    <body>
+        <!-- 전체 레이아웃을 wrap해주는 div
+             해당 div를 가운데 정렬시키면 웹 페이지(화면) 정중앙에 위치하게 됨. -->
+        <div class="container">
+            <div class="post">
+                <!-- 프로필 info가 들어갈 div -->
+                <div>
+                    <img src="image/image_Profile.png" class="profile_photo">
+                    <div class="profile_info">
+                        <!-- h, p 태그는 기본으로 margin을 가지고 있음. -->
+                        <h4 style="margin: 8px;"> 😼 이까꿍 </h4>
+                        <p style="color:grey; margin: 8px;"> 1시간 전 </p>
+                    </div>
+                </div>
+                <!-- 블로그 게시글 제목, 내용이 들어갈 div 
+                     Tip) 게시글 제목, 내용이 들어갈 div class를 따로 정의하지 않고
+                          바로 div style="clear: both"를 사용할 수도 있음.-->
+                <div class="blog">
+                    <h3 style="margin:auto 10px auto 10px"> 이규리는 바보예요~ </h3>
+                    <p style="margin:10px 20px auto 20px"> 왜냐면 이유는 없습니다. 제가 바보라면 그냥 바보인 거예요!
+                        오늘은 이규리가 바보인 이유에 대해서 알아보았는데요~
+                        다들 유익한 정보되셨길 바라며 우리는 다음 시간에 또 만나요!
+                    </p>
+                </div>
+            </div>
+            <div class="photo">
+                <img src="image/cat1.jpeg" width="70%" style="margin-top:30px">
+            </div>
+        </div>
+    </body>
+</html>
