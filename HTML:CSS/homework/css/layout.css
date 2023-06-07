@@ -40,5 +40,32 @@
 .blog {
     width: 100%;
     height: 200px;
-    clear: both;
+    /* clear: both; */
+}
+
+/* selector 문법
+    공백: ~ 안에 있는이라는 뜻 (모든 자식 속성도 포함시킴)
+        따라서, navbar class 안에 있는 모든 li 속성들은 아래의 style 속성을 적용시킴.
+    >: ~ 안에 있는이라는 뜻(직계 자식만 적용) */
+.navbar li{
+    display:inline-block;
+    width: 60px;
+    text-align: center;
+    background: #eee;
+    padding: 10px;
+    border-radius: 5px;
+}
+
+.navbar a{
+    font-size: 16px;
+    /* a 태그의 밑줄 제거 가능 */
+    text-decoration: none;
+    /* a 태그 추가 속성
+        1. a{color: 색상 이름 or 색상 코드;}
+        2. a:link {속성} => 기본, 클릭 전 
+        3. a:visited {속성} => 클릭 후
+        4. a:hover {속성} => 마우스를 위에 올려뒀을 때
+        5. a:active => 마우스를 클릭하는 순간
+        */
+
 }

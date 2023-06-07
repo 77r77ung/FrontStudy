@@ -6,6 +6,17 @@
         <link href="css/layout.css" rel="stylesheet">
     </head>
     <body>
+        <!-- navbar -->
+        <nav>
+            <!-- Tip) 두 개 이상의 class를 부여하고 싶을 때 class="클래스명1 클래스명2" : 클래스명 사이에 공백을 추가하면 됨.-->
+            <ul class="navbar">
+                <li><a href="#">1</a></li>
+                <li><a href="#">2</a></li>
+                <li><a href="#">3</a></li>
+                <li><a href="#">4</a></li>
+            </ul>
+        </nav>
+
         <!-- 전체 레이아웃을 wrap해주는 div
              해당 div를 가운데 정렬시키면 웹 페이지(화면) 정중앙에 위치하게 됨. -->
         <div class="container">
@@ -19,6 +30,12 @@
                         <p style="color:grey; margin: 8px;"> 1시간 전 </p>
                     </div>
                 </div>
+                <!-- profile_info 박스가 float 성질로 인해 공중에 붕 띄워져있음.
+                     따라서, 해당 박스 아래에 위치하는 박스(:blog)에 margin-top 스타일을 넣으려면
+                     1. profile_info 박스의 heigt보다 큰 숫자를 넣거나
+                     2. profile_info 박스와 blog 박스 사이의 의미없는 박스를 하나 추가해준다.
+                     2번의 방법을 사용하면 의미없는 박스부터 제자리를 찾기 때문에 위쪽 여백을 제대로 적용해줄 수 있음.-->
+                <div style="clear:both;"></div>
                 <!-- 블로그 게시글 제목, 내용이 들어갈 div 
                      Tip) 게시글 제목, 내용이 들어갈 div class를 따로 정의하지 않고
                           바로 div style="clear: both"를 사용할 수도 있음.-->
