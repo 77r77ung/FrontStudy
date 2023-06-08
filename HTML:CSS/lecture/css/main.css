@@ -1,3 +1,16 @@
+/* Tip) 모든 div 요소에 자동으로 border-box를 적용시킴. */
+div {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0px;
+}
+
+/* 브라우저 사이의 호환성 문제를 해결: normalize.css 
+    적용방법 1. 구글링 -> css 파일 상단에 붙여넣기 
+    적용방법 2. 구글링 -> html 링크로 연결*/
+
 .profile {
     width: 100px;
     display: block;
@@ -107,6 +120,8 @@
     filter: brightness(70%) */
     /* div 박스 테두리 떨어트리기 */
     padding: 1px;
+    text-align: center;
+    position: relative;
 }
 
 .main-title {
@@ -125,3 +140,99 @@
     */
     margin-top: 200px;
 }
+
+.main-content {
+    color: white;
+    font-size: 20px;
+    margin-top: 50px;
+    margin-bottom: 50px;;
+}
+
+.main-button {
+    padding: 15px;
+    font-size: 20px;
+    background-color: white;
+    border: none;
+    border-radius: 5px;
+    /* 좌표 속성으로 배치하는 방법 => position
+        - position: releative; 꼭 써야 함.
+            => 기준점 | 내 원래 위치를 기준으로 이동하라는 뜻임.
+        - position: static; 좌표 이동을 하지 않음.
+        - position: fixed; 현재 화면이 기준점이 됨.
+            현재 화면을 기준으로 고정되는 요소가 필요할 때 사용함.
+        - position: absolute; 내 부모 태그가 기준점이 됨.
+            부모 태그가 기준점이 되려면 해당 태그가 position: relative;를 가지고 있어야 함.
+        - top, right, left, bottom
+        - -이동이 가능함.
+        - 공중에 뜨는 성질이 있음. */
+    position:absolute;
+    left: 0;
+    right: 0;
+    margin: auto;
+    width: 150px;
+}
+
+/* position: absolute가 있는 요소를 가운데 정렬하려면
+    position: absolute;
+    left: 0;
+    right: 0;
+    margin: auto;
+    width: 는 존재하기만 하면 됨(값 상관 x) */
+
+.sub{
+    background-color: #eee;
+    text-align: center;
+    margin: auto;
+    /* max-width
+        반응형 웹페이지를 만들고 싶을 땐 %를 사용하면 됨.
+        하지만 width %의 문제는 pc 화면에서는 요소가 너무 커짐.
+        +) min-width / max-hight 등등도 있음. 
+        
+        !!width는 content 영역의 너비를 의미함.
+            - padding, border은 width와 상관없음.
+        따라서, 코드 상 width는 500px이지만 padding이 50px씩 들어가면 실제 화면에 보여지는 width는 600px이 됨.
+        -> 요소 크기 제단이 어려워짐.
+        해결 방안) width에 content뿐만 아니라 padding, border도 포함시켜줌.
+                 box-sizing: border-box;
+            <-> content-box; content만 포함시킴.*/
+    box-sizing: border-box;
+    width: 80%;
+    max-width: 600px;
+    /* position:absolute;
+    left: 0;
+    right: 0;
+    padding: 10px;
+    bottom: -130px; */
+    position: relative;
+    top: -40px;
+    padding: 20px;
+    /* z-index: 정수
+        공중에 떠있는 요소들의 앞뒤 순서를 정해줌.
+        정수가 높을 수록 앞에 옴. */
+    z-index: 5;
+}
+
+.text-input {
+    padding: 10px;
+    font-size: 20px;
+    border: 2px solid red;
+    border-radius: 5px;
+}
+
+/* 
+모든 input에 아래의 스타일이 적용됨.
+input {
+    padding: 10px;
+    font-size: 20px;
+    border: 2px solid red;
+    border-radius: 5px;
+}
+
+type이 text인 input만 해당 스타일이 적용됨.
+input[type=text]{
+    padding: 10px;
+    font-size: 20px;
+    border: 2px solid red;
+    border-radius: 5px;
+}
+*/
